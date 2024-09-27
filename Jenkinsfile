@@ -22,7 +22,7 @@ pipeline {
 
         stage('Run Ansible Playbook') {
             steps {
-                sh 'ansible-playbook -i /tmp/inv -u ec2-user -b --become-method sudo web.yaml'
+                sh 'ansible-playbook -i /tmp/inv -u ec2-kumaruser -b --become-method sudo web.yaml'
             }
         }
     }
